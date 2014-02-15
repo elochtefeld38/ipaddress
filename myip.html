@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>What is my ip address</title>
+<link rel="stylesheet" type="text/css" href="ip.css"/>
+<script type="text/javascript" src="lib/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+function ip()
+{
+$.post("ip.php",{ ip: "ip" }, 
+function(output) {
+$("#output").html(output);
+});
+}
+</script>
+
+</head>
+<body onload="ip()">
+<div id="main">
+	<div id="main_content">
+		<div id="output"></div>
+	</div>
+</div>
+</body>
+</html>
